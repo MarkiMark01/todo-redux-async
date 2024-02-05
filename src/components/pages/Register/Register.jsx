@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -13,6 +16,9 @@ const Register = () => {
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
+  };
+  const handleSubmit = () => {
+    navigate("todo");
   };
 
   return (
@@ -41,7 +47,9 @@ const Register = () => {
         <section>
           <button type="button">Back</button>
           <button type="button">Log In</button>
-          <button type="button">Register</button>
+          <button type="button" onClick={() => handleSubmit()}>
+            Register
+          </button>
         </section>
       </form>
     </section>
