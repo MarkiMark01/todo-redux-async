@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { getAuthError, isAuth } from "../../redux/auth/authSelectors";
 
@@ -27,7 +26,7 @@ const Register = () => {
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
-  const handleSubmit = (e) => {
+  const onRegister = (e) => {
     e.preventDefault();
     const data = { name, email, password };
     dispatch(signup(data));
@@ -35,13 +34,14 @@ const Register = () => {
     setEmail("");
     setPassword("");
   };
+
   if (isLogin) {
-    navigate("/todo");
+    return navigate("/todo");
   }
 
   return (
     <section>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onRegister}>
         <section>
           <input
             type="text"
