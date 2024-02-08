@@ -1,11 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import * as api from '../../shared/authApi';
+import * as api from "../../shared/authApi";
 
-export const signUp = createAsyncThunk(
-    'auth/signup',
+export const signup = createAsyncThunk(
+    "auth/signup",
     async (data, { rejectWithValue }) => {
         try {
-            const result = await api.signUpApi(data);
+            const result = await api.signup(data);
             return result;
         } catch ({ responce }) {
             const { status, data } = responce;
@@ -15,5 +15,4 @@ export const signUp = createAsyncThunk(
             }
             return rejectWithValue(error);
         }
-    }
-)
+    });
