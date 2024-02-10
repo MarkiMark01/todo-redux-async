@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { getAuthError, isAuth } from "../../redux/auth/authSelectors";
-
 import { signup } from "../../redux/auth/authOperations";
 
 const Register = () => {
@@ -12,7 +11,6 @@ const Register = () => {
   const [password, setPassword] = useState("");
 
   const { status, message } = useSelector(getAuthError);
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isLogin = useSelector(isAuth);
@@ -26,6 +24,12 @@ const Register = () => {
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
+  const goBack = () => {
+    navigate(-1);
+  };
+  const goLogin = () => {
+    navigate("/");
+  };
   const onRegister = (e) => {
     e.preventDefault();
     const data = { name, email, password };
@@ -36,7 +40,8 @@ const Register = () => {
   };
 
   if (isLogin) {
-    return navigate("/todo");
+    navigate("/todo");
+    return null;
   }
 
   return (
@@ -63,8 +68,12 @@ const Register = () => {
           />
         </section>
         <section>
-          <button type="button">Back</button>
-          <button type="button">Log In</button>
+          <button type="button" onClick={goBack}>
+            Back
+          </button>
+          <button type="button" onClick={goLogin}>
+            Log In
+          </button>
           <button type="submit">Register</button>
         </section>
       </form>
