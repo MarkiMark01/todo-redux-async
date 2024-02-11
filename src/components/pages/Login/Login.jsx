@@ -1,14 +1,21 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
+  };
+  const goRegister = () => {
+    navigate("/register");
+    return null;
   };
 
   return (
@@ -29,8 +36,9 @@ const Login = () => {
           />
         </section>
         <section>
-          <button type="button">Back</button>
-          <button type="button">Register</button>
+          <button type="button" onClick={goRegister}>
+            Register
+          </button>
           <button type="submit">Log In</button>
         </section>
       </form>
