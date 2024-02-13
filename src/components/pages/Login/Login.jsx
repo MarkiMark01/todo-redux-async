@@ -21,9 +21,9 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const goTodo = () => {
+  const goTodo = (e) => {
     e.preventDefault();
-    const { email, password } = data;
+    const data = { email, password };
     dispatch(login(data));
     setEmail("");
     setPassword("");
@@ -41,7 +41,7 @@ const Login = () => {
 
   return (
     <section>
-      <form>
+      <form onSubmit={goTodo}>
         <section>
           <input
             type="email"
