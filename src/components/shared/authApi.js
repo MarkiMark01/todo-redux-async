@@ -14,4 +14,10 @@ export const login = async (data) => {
     authInstance.defaults.headers.common.authorization = `Bearer ${result.token}`;
     return result;
 };
+export const logout = async () => {
+    const result = await authInstance.post("/users/logout");
+    authInstance.defaults.headers.common.authorization = '';
+    return result;
+};
+
 
