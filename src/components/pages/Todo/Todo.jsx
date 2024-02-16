@@ -1,10 +1,20 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import { getUser } from "../../redux/auth/authSelectors";
+import { logout } from "../../redux/auth/authOperations";
 
 const Todo = () => {
   const { name } = useSelector(getUser);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const onLogout = () => {
+    dispatch(logout());
+    navigate("/");
+  };
 
   return (
     <>
@@ -12,7 +22,9 @@ const Todo = () => {
         <section>Filter</section>
         <section>
           <span>{name}</span>
-          <button>Log Out</button>
+          <button type="button" onClick={onLogout}>
+            Log Out
+          </button>
         </section>
       </header>
       <main>
