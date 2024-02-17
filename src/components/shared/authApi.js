@@ -19,5 +19,14 @@ export const logout = async () => {
     authInstance.defaults.headers.common.authorization = '';
     return result;
 };
-
+export const getCurrent = async (token) => {
+    try {
+        const { data } = await authInstance.get('/users/current')
+        authInstance.defaults.headers.common.authorization = `Bearer ${token}`;
+        return data;
+    } catch (error) {
+        authInstance.defaults.headers.common.authorization = "";
+        throw error;
+    }
+}
 
