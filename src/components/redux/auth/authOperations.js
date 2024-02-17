@@ -7,8 +7,8 @@ export const signup = createAsyncThunk(
         try {
             const result = await api.signup(data);
             return result;
-        } catch ({ responce }) {
-            const { status, data } = responce;
+        } catch ({ response }) {
+            const { status, data } = response;
             const error = {
                 status,
                 message: data.message,
@@ -22,8 +22,8 @@ export const login = createAsyncThunk(
         try {
             const result = await api.login(data);
             return result;
-        } catch ({ responce }) {
-            const { status, data } = responce;
+        } catch ({ response }) {
+            const { status, data } = response;
             const error = {
                 status,
                 message: data.message,
@@ -37,8 +37,8 @@ export const logout = createAsyncThunk(
         try {
             const result = await api.logout();
             return result;
-        } catch ({ responce }) {
-            const { status, data } = responce;
+        } catch ({ response }) {
+            const { status, data } = response;
             const error = {
                 status,
                 message: data.message,
@@ -46,4 +46,21 @@ export const logout = createAsyncThunk(
             return rejectWithValue(error);
         }
     });
+export const getCurrent = createAsyncThunk(
+    'auth/current',
+    async (_, { rejectWithValue, getState }) => {
+        try {
+            const { auth } = getState();
+            const result = await api.getCurrent(auth.token);
+            return result;
+        } catch ({ response }) {
+            const { status, data } = response;
+            const error = {
+                status,
+                message: data.message,
+            }
+            return rejectWithValue(error);
+        }
+    }
+)
 
