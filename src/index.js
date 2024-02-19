@@ -5,17 +5,20 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 
-import { store } from './components/redux/store';
+import { store, persistor } from './components/redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <HashRouter>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </HashRouter>
+    <PersistGate loading={null} persistor={persistor}>
+      <HashRouter>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </HashRouter>
+    </PersistGate>
   </Provider>
 );
 
