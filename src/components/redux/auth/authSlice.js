@@ -65,13 +65,15 @@ const authSlice = createSlice({
                 state.loading = false;
                 state.user = payload.user;
                 state.token = payload.token;
+                state.user = payload;
                 state.isLogin = true;
             })
             .addCase(getCurrent.rejected, (state, { payload }) => {
                 state.loading = false;
                 state.token = "";
                 state.error = payload;
-            })
+
+            });
 
 
 
