@@ -21,8 +21,8 @@ export const logout = async () => {
 };
 export const getCurrent = async (token) => {
     try {
-        const { data } = await authInstance.get('/users/current')
         authInstance.defaults.headers.common.authorization = `Bearer ${token}`;
+        const { data } = await authInstance.get('/users/current')
         return data;
     } catch (error) {
         authInstance.defaults.headers.common.authorization = "";
