@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/181.2fa77887.chunk.js","mappings":"6JAAA,MAGA,EAHaA,KACJC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,Q","sources":["components/pages/Todo/Todo.jsx"],"sourcesContent":["const Todo = () => {\r\n  return <div>Todo</div>;\r\n};\r\nexport default Todo;\r\n"],"names":["Todo","_jsx","children"],"sourceRoot":""}
