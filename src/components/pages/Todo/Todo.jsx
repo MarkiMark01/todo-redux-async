@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import { getUser } from "../../redux/auth/authSelectors";
 import { logout } from "../../redux/auth/authOperations";
+import AddTasks from "./AddTasks";
 
 const Todo = () => {
   const { name } = useSelector(getUser);
@@ -19,22 +20,23 @@ const Todo = () => {
 
   return (
     <>
-      <header>
+      <header style={{ background: "blue" }}>
         <section>Filter</section>
         <section>
-          <span>{name}</span>
+          <span style={{ color: "white" }}>{name}</span>
           <button type="button" onClick={onLogout}>
             Log Out
           </button>
         </section>
       </header>
-      <main>
-        <section>
-          <p>enter tasks</p>
-        </section>
-        <section>Tasks List</section>
+
+      <main style={{ height: "100vh" }}>
+        <AddTasks />
       </main>
-      <footer>2024@Markiyan Marych</footer>
+
+      <footer style={{ background: "blue", color: "white" }}>
+        2024@Markiyan Marych
+      </footer>
     </>
   );
 };
