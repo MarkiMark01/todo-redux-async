@@ -1,6 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { getUser } from "../../redux/auth/authSelectors";
@@ -21,7 +20,9 @@ const Todo = () => {
   return (
     <>
       <header style={{ background: "blue" }}>
-        <section>Filter</section>
+        <section>
+          <input placeholder="Filter your tasks" />
+        </section>
         <section>
           <span style={{ color: "white" }}>{name}</span>
           <button type="button" onClick={onLogout}>
