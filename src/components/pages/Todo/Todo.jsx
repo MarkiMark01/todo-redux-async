@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getUser } from "../../redux/auth/authSelectors";
 import { logout } from "../../redux/auth/authOperations";
 import AddTasks from "./AddTasks";
+import TodoList from "./TodoList";
 
 const Todo = () => {
   const { name } = useSelector(getUser);
@@ -33,6 +34,7 @@ const Todo = () => {
 
       <main style={{ height: "100vh" }}>
         <AddTasks />
+        <TodoList />
       </main>
 
       <footer style={{ background: "blue", color: "white" }}>
