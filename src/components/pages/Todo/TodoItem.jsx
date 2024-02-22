@@ -1,4 +1,10 @@
 const TodoItem = () => {
-  return <li></li>;
+  return (
+    <li>
+      <input type="checkbox" />
+      <span>Title</span>
+      <span>&times;</span>
+    </li>
+  );
 };
 export default TodoItem;
