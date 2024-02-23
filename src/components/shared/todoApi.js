@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const todoInstance = axios.create({
-    baseURL: "https://connections-api.herokuapp.com"
+    baseURL: "https://65d6fc9e27d9a3bc1d79d5de.mockapi.io/t"
 })
 
-export const createTodo = async (data) => {
-    const { data: result } = await todoInstance.post('/contacts', data);
-    return result
+export const getTasks = async () => {
+    const { data } = await todoInstance.get('/tasks');
+    return data
 };
