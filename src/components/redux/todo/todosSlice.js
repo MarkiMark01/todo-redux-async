@@ -7,9 +7,12 @@ const initialState = {
     error: null,
 };
 
-const todoSlice = createSlice({
-    name: 'todos',
+const todosSlice = createSlice({
+    name: 'todo',
     initialState,
+    selectors: {
+        selectTodos: state => state.todos
+    },
     reducers: {
         // Ваші редуктори тут, якщо є
     },
@@ -29,5 +32,5 @@ const todoSlice = createSlice({
             });
     }
 });
-
-export default todoSlice.reducer;
+export const { selectTodos } = todosSlice.selectors;
+export default todosSlice.reducer;

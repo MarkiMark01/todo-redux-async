@@ -1,15 +1,25 @@
-import TodoItem from "./TodoItem";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchTodos } from "../../redux/todo/todoOperations";
+import { selectTodos } from "../../redux/todo/todosSlice";
+// import TodoItem from "./TodoItem";
 
 const TodoList = () => {
-  const todos = useSelector((state) => state.todos.todos);
+  const todos = useSelector(selectTodos);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
 
   return (
-    <ul>
+    <ul style={{ background: "green" }}>
       {todos.map((todo) => (
-        <TodoItem key={todo.id} {...todo} />
+        <li key={todo.id}>{todo.title}</li>
       ))}
     </ul>
   );
 };
+
 export default TodoList;

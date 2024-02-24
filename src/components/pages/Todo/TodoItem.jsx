@@ -1,10 +1,11 @@
-const TodoItem = () => {
+const TodoItem = ({ todo }) => {
   return (
-    <li>
+    <li style={{ background: "yellow" }}>
       <input type="checkbox" />
-      <span>Title</span>
+      <span>{todo.title}</span>
       <span>&times;</span>
     </li>
   );
 };
+
 export default TodoItem;

@@ -1,15 +1,21 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import * as api from '../../shared/todoApi';
+
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchTodos = createAsyncThunk(
-    '/tasks/fetchTodos',
+    'todos/fetchTodos',
     async function (_, { rejectWithValue }) {
         try {
-            const response = await api.getTasks()
+            const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=10');
+
+            if (!response.ok) {
+                throw new Error('Server Error!');
+            }
+
             const data = await response.json();
-            return data
+
+            return data;
         } catch (error) {
-            return rejectWithValue(error.message)
+            return rejectWithValue(error.message);
         }
     }
 );
