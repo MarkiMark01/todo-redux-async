@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import authReducer from '../redux/auth/authSlice';
+import todoReducer from '../redux/todo/todoSlice';
 import storage from "redux-persist/lib/storage";
 import {
     persistReducer,
@@ -24,7 +25,7 @@ const persistedReducer = persistReducer(persistConfig, authReducer);
 export const store = configureStore({
     reducer: {
         auth: persistedReducer,
-
+        todo: todoReducer
 
     },
     middleware: (getDefaultMiddleware) =>
