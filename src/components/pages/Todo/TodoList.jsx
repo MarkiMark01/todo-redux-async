@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTodos } from "../../redux/todo/todoOperations";
 import { selectTodos } from "../../redux/todo/todosSlice";
+import TodoItem from "./TodoItem";
 // import TodoItem from "./TodoItem";
 
 const TodoList = () => {
@@ -16,7 +17,7 @@ const TodoList = () => {
   return (
     <ul style={{ background: "green" }}>
       {todos.map((todo) => (
-        <li key={todo.id}>{todo.title}</li>
+        <TodoItem key={todo.id} todo={todo} />
       ))}
     </ul>
   );

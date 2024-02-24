@@ -2,12 +2,14 @@
 
 import axios from 'axios';
 
-const instance = axios.create({
-    baseURL: 'https://65d9d44cbcc50200fcdc2d0c.mockapi.io/tasks/',
-});
+const url = 'https://65da2b69bcc50200fcdcaf20.mockapi.io/api/tasks';
 
 export const getTasks = async () => {
-    const { data } = await instance.get('/todo');
-    return data;
+    try {
+        const response = await axios.get(url);
+        return response.data;
+    } catch (error) {
+        console.error('Сталася помилка при виконанні запиту:', error);
+        throw error;
+    }
 }
-
