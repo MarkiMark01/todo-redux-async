@@ -1,6 +1,6 @@
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getTasks } from '../../shared/todoApi';
+import { getTasks, addTasks } from '../../shared/todoApi';
 
 export const fetchTodos = createAsyncThunk(
     'todos/fetchTodos',
@@ -8,6 +8,17 @@ export const fetchTodos = createAsyncThunk(
         try {
             const data = await getTasks();
             return data;
+        } catch (error) {
+            return rejectWithValue(error.message);
+        }
+    }
+);
+export const addTodos = createAsyncThunk(
+    'todos/addTodos',
+    async function (data, { rejectWithValue }) {
+        try {
+            const result = await addTasks(data);
+            return result;
         } catch (error) {
             return rejectWithValue(error.message);
         }
