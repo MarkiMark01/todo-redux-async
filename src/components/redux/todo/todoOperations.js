@@ -1,6 +1,7 @@
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getTasks, addTasks } from '../../shared/todoApi';
+import addNewTask from '../todo/todosSlice'
 
 export const fetchTodos = createAsyncThunk(
     'todos/fetchTodos',
@@ -13,12 +14,37 @@ export const fetchTodos = createAsyncThunk(
         }
     }
 );
+// export const addTodos = createAsyncThunk(
+//     'todos/addTodos',
+//     async function (text, { rejectWithValue }) {
+//         try {
+//             const todo = {
+//                 title: text,
+//                 id: 1,
+//                 completed: false,
+//             };
+//             const data = await addTasks(todo);
+//             return data;
+//         } catch (error) {
+//             return rejectWithValue(error.message);
+//         }
+//     }
+// );
+
+
+
 export const addTodos = createAsyncThunk(
     'todos/addTodos',
-    async function (data, { rejectWithValue }) {
+    async function (text, { dispatch, rejectWithValue }) {
         try {
-            const result = await addTasks(data);
-            return result;
+            const todo = {
+                title: text,
+                id: 1,
+                completed: false,
+            };
+            const response = await addTasks(todo);
+            const data = response.data;
+            dispatch(addNewTask(data));
         } catch (error) {
             return rejectWithValue(error.message);
         }

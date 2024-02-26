@@ -14,7 +14,9 @@ const todosSlice = createSlice({
         selectTodos: state => state.todos
     },
     reducers: {
-        // Ваші редуктори тут, якщо є
+        addNewTask(state, action) {
+            state.todos.push(action.payload)
+        }
     },
     extraReducers: builder => {
         builder
