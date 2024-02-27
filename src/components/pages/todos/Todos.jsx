@@ -7,7 +7,7 @@ import TodoList from "./TodoList";
 
 const Todos = () => {
   const [text, setText] = useState("");
-  const { status, error } = useSelector((state) => state.todos);
+  const { error } = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
   const handleAction = () => {
@@ -29,7 +29,7 @@ const Todos = () => {
         handleAction={handleAction}
       />
 
-      {status === "loading" && <h2>Loading...</h2>}
+      {/* {status === "loading" && <h2>Loading...</h2>} */}
       {error && <h2>An error occured: {error}</h2>}
 
       <TodoList />
