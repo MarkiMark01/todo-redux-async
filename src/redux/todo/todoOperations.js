@@ -1,14 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { addTodo } from './todoSlice';
-import { removeTodo } from './todoSlice';
-import { toggleComplete } from './todoSlice';
+import { addTodo, removeTodo, toggleComplete } from '../todo/todoSlice';
+
 
 export const fetchTodos = createAsyncThunk(
     'todos/fetchTodos',
     async function (_, { rejectWithValue }) {
         try {
-            // const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=5');
             const response = await fetch('https://65da2b69bcc50200fcdcaf20.mockapi.io/api/tasks');
 
             if (!response.ok) {

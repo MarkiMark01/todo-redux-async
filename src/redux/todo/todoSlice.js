@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { fetchTodos, deleteTodo, toggleStatus } from './todoOperations';
+import { fetchTodos, deleteTodo, toggleStatus } from '../todo/todoOperations';
 
 const setError = (state, action) => {
     state.status = 'rejected';
