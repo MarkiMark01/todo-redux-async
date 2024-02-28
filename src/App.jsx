@@ -1,12 +1,12 @@
 import React from "react";
 
 import "./App.css";
-import Todos from "./components/pages/todos/Todos";
+import UserRoutes from "./components/UserRoutes";
 
 function App() {
   return (
     <div className="App">
-      <Todos />
+      <UserRoutes />
     </div>
   );
 }

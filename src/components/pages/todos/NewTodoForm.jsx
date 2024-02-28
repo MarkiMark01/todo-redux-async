@@ -1,11 +1,7 @@
-const NewTodoForm = ({ value, updateText, handleAction }) => {
+const NewTodoForm = ({ value, handleText, handleAction }) => {
   return (
     <label>
-      <input
-        placeholer='new todo'
-        value={value}
-        onChange={(e) => updateText(e.target.value)}
-      />
+      <input placeholer="new todo" value={value} onChange={handleText} />
       <button onClick={handleAction}>Add todo</button>
     </label>
   );
