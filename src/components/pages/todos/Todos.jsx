@@ -31,7 +31,7 @@ const Todos = () => {
   }, [dispatch]);
 
   return (
-    <div className="App">
+    <main className="App">
       <NewTodoForm
         value={text}
         handleText={handleText}
@@ -41,7 +41,7 @@ const Todos = () => {
       <TodoList filter={filterText} />
       {/* {status === "loading" && <h2>Loading...</h2>} */}
       {error && <h2>An error occured: {error}</h2>}
-    </div>
+    </main>
   );
 };
 

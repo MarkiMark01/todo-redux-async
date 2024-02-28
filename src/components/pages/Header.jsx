@@ -1,11 +1,33 @@
+import { useSelector, useDispatch } from "react-redux";
+import { getUser } from "../../redux/auth/authSelectors";
+import { logout } from "../../redux/auth/authOperations";
+import useAuth from "../../shared/hooks/useAuth";
+
 const Header = () => {
+  const { name } = useSelector(getUser);
+
+  const dispatch = useDispatch();
+
+  const isLogin = useAuth();
+
+  const onLogout = () => {
+    dispatch(logout());
+    // return <Navigate to={"/"} />;
+  };
+
   return (
-    <section>
+    <header>
       <section>
-        <span>name</span>
-        <button>Log out</button>
+        <span>My Todo List</span>
       </section>
-    </section>
+      {isLogin ? (
+        <section>
+          <span>{name}</span>
+          <button onClick={onLogout}>Log out</button>
+        </section>
+      ) : null}
+    </header>
   );
 };
+
 export default Header;

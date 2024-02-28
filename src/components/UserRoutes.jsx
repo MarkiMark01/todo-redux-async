@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const PrivateRoute = lazy(() => import("./modules/PrivateRoute"));
 const Todos = lazy(() => import("./pages/todos/Todos"));
@@ -14,6 +15,7 @@ const UserRoutes = () => {
         <Route path="/register" element={<Registration />}></Route>
         <Route element={<PrivateRoute />}>
           <Route path="/todos" element={<Todos />}></Route>
+          <Route path="*" element={<NotFoundPage />}></Route>
         </Route>
       </Routes>
     </Suspense>

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import useAuth from "../../shared/hooks/useAuth";
-// import { login } from "../../redux/auth/auth-operations";
-// import styles from "./stylesLogin.module.scss";
+import { useDispatch } from "react-redux";
+import useAuth from "../../../shared/hooks/useAuth";
+import { login } from "../../../redux/auth/authOperations";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -11,42 +10,40 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  //   const isLogin = useAuth();
+  const isLogin = useAuth();
 
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  //   const onLogin = (e) => {
-  //     e.preventDefault();
-  //     if (email.trim() === "" || password.trim() === "") {
-  //       alert("Enter your login and password or sign up, please :)");
-  //       return;
-  //     }
-  //     const data = { email, password };
-  //     dispatch(login(data));
-  //     setEmail("");
-  //     setPassword("");
-  //   };
+  const onLogin = (e) => {
+    e.preventDefault();
+    if (email.trim() === "" || password.trim() === "") {
+      alert("Enter your login and password or sign up, please :)");
+      return;
+    }
+    const data = { email, password };
+    dispatch(login(data));
+    setEmail("");
+    setPassword("");
+  };
 
   const handleSignup = (e) => {
     e.preventDefault();
     navigate("/register");
   };
 
-  //   if (isLogin) {
-  //     return navigate("/todos");
-  //   }
+  if (isLogin) {
+    return navigate("/todos");
+  }
 
   return (
     <>
       <main>
         <section>
-          <form
-          //   onSubmit={onLogin}
-          >
+          <form onSubmit={onLogin}>
             <h1>Log in</h1>
-            <p>
+            {/* <p>
               Log in now to unlock your exclusive access to content and offers
-            </p>
+            </p> */}
             <input
               type="text"
               placeholder="Email address"
@@ -60,10 +57,10 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <section>
-              <button type="submit">Log in</button>
               <button type="button" onClick={handleSignup}>
                 Sign up
               </button>
+              <button type="submit">Log in</button>
             </section>
             <section>
               <div>

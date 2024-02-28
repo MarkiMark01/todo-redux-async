@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux/es/hooks/useSelector";
-import { isAuth } from "../../redux/auth/auth-selectors";
+import { useSelector } from "react-redux";
+import { isAuth } from "../../redux/auth/authSelectors";
 
 const useAuth = () => {
 

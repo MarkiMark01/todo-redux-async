@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <section>
+    <footer>
       <span>2024@Markiyan Marych</span>
-    </section>
+    </footer>
   );
 };
 export default Footer;
