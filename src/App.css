@@ -17,7 +17,7 @@ input:checked + span {
   text-decoration: line-through;
 }
 
-span:last-child {
+/* span:last-child {
   color: red;
   cursor: pointer;
-}
+} */
