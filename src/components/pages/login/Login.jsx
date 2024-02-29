@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import useAuth from "../../../shared/hooks/useAuth";
-import { login } from "../../../redux/auth/authOperations";
+import useAuth from "../../shared/hooks/useAuth";
+import { login } from "../../redux/auth/authOperations";
 
 const Login = () => {
   const [email, setEmail] = useState("");

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { signup } from "../../../redux/auth/authOperations";
-import { getAuthError } from "../../../redux/auth/authSelectors";
-import useAuth from "../../../shared/hooks/useAuth";
+import { signup } from "../../redux/auth/authOperations";
+import { getAuthError } from "../../redux/auth/authSelectors";
+import useAuth from "../../shared/hooks/useAuth";
 
 const Signin = () => {
   const [name, setName] = useState("");

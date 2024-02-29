@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { current } from "./redux/auth/authOperations";
+import { current } from "./components/redux/auth/authOperations";
 
 import "./App.css";
 import UserRoutes from "./components/UserRoutes";

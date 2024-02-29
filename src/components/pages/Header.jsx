@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
-import { getUser } from "../../redux/auth/authSelectors";
-import { logout } from "../../redux/auth/authOperations";
-import useAuth from "../../shared/hooks/useAuth";
+import { getUser } from "../../components/redux/auth/authSelectors";
+import { logout } from "../../components/redux/auth/authOperations";
+import useAuth from "../shared/hooks/useAuth";
 
 const Header = () => {
   const { name } = useSelector(getUser);
