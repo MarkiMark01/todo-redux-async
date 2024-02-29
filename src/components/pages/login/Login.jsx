@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import useAuth from "../../shared/hooks/useAuth";
 import { login } from "../../redux/auth/authOperations";
+import styles from "./Login.module.scss";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -38,36 +39,46 @@ const Login = () => {
   return (
     <>
       <main>
-        <section>
-          <form onSubmit={onLogin}>
-            <h1>Log in</h1>
-            {/* <p>
+        <section className={styles.login}>
+          <form onSubmit={onLogin} className={styles.login__container}>
+            <h1 className={styles.login__title}>Log in</h1>
+            <p>
               Log in now to unlock your exclusive access to content and offers
-            </p> */}
+            </p>
             <input
               type="text"
               placeholder="Email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className={styles.login__log}
             />
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className={styles.login__sign}
             />
-            <section>
-              <button type="button" onClick={handleSignup}>
+            <section className={styles.login__buttons}>
+              <button type="submit" className={styles.login__btn}>
+                Log in
+              </button>
+              <button
+                type="button"
+                onClick={handleSignup}
+                className={styles.login2__btn}
+              >
                 Sign up
               </button>
-              <button type="submit">Log in</button>
             </section>
-            <section>
+            <section className={styles.login__text}>
               <div>
                 <span>Don't have an account?</span>
               </div>
             </section>
-            <NavLink to={"/register"}>Register Now</NavLink>
+            <NavLink to={"/register"} className={styles.login__link}>
+              Register Now
+            </NavLink>
           </form>
         </section>
       </main>

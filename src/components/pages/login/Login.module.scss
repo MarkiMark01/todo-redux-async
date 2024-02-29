@@ -1,0 +1,335 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/placeholders";
+
+.login {
+  @extend %flex-center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $color-white;
+
+  .login__container2 {
+    margin-top: 35px;
+  }
+
+  .login__container,
+  .login__container2 {
+    @extend %flex-center;
+    flex-direction: column;
+    width: 350px;
+    height: 400px;
+    background-color: $color-grey;
+    border-radius: 15px;
+    border: 1px solid $color-gold;
+
+    @media (max-width: 650px) {
+      width: 300px;
+      height: 350px;
+    }
+    @media (max-width: 450px) {
+      width: 280px;
+      height: 330px;
+    }
+    @media (max-width: 375px) {
+      width: 270px;
+      height: 320px;
+    }
+    @media (max-width: 358px) {
+      width: 260px;
+      height: 310px;
+    }
+
+    .login__log {
+      text-align: start;
+      height: 20px;
+      width: 260px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 20px;
+      border: 1px solid $color-gold;
+      padding: 10px;
+      outline: none;
+      margin: 0px 0px 15px 0px;
+
+      @media (max-width: 650px) {
+        height: 38px;
+        width: 250px;
+        font-size: 13px;
+      }
+      @media (max-width: 450px) {
+        height: 36px;
+        width: 240px;
+      }
+      @media (max-width: 375px) {
+        height: 34px;
+        width: 230px;
+      }
+      @media (max-width: 358px) {
+        height: 33px;
+        width: 220px;
+      }
+
+      &::placeholder {
+        color: rgba(165, 163, 163, 0.671);
+      }
+      &:focus {
+        border: 2px solid $color-red;
+      }
+    }
+    .login__sign {
+      text-align: start;
+      height: 20px;
+      width: 260px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 20px;
+      border: 1px solid $color-gold;
+      padding: 10px;
+      outline: none;
+
+      @media (max-width: 650px) {
+        height: 38px;
+        width: 250px;
+        font-size: 13px;
+      }
+
+      @media (max-width: 450px) {
+        height: 36px;
+        width: 240px;
+      }
+
+      @media (max-width: 375px) {
+        height: 34px;
+        width: 230px;
+      }
+      @media (max-width: 358px) {
+        height: 33px;
+        width: 220px;
+      }
+
+      &::placeholder {
+        color: rgba(165, 163, 163, 0.671);
+      }
+      &:focus {
+        border: 2px solid $color-red;
+      }
+    }
+    .login__name {
+      text-align: start;
+      height: 40px;
+      width: 260px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 20px;
+      border: 2px solid $color-gold;
+      padding: 10px;
+      outline: none;
+      margin-top: 40px;
+
+      @media (max-width: 650px) {
+        height: 38px;
+        width: 250px;
+        font-size: 13px;
+        margin-top: 30px;
+      }
+      @media (max-width: 450px) {
+        height: 36px;
+        width: 240px;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 375px) {
+        height: 34px;
+        width: 230px;
+      }
+      @media (max-width: 358px) {
+        height: 33px;
+        width: 220px;
+      }
+
+      &::placeholder {
+        color: rgba(165, 163, 163, 0.671);
+      }
+      &:focus {
+        border: 2px solid $color-darkblue;
+      }
+    }
+
+    .login__title {
+      color: $color-black;
+      font-size: 32px;
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-family: "Salsa";
+
+      @media (max-width: 650px) {
+        font-size: 28px;
+      }
+      @media (max-width: 450px) {
+        font-size: 26px;
+      }
+      @media (max-width: 375px) {
+        font-size: 24px;
+      }
+      @media (max-width: 358px) {
+        font-size: 24px;
+      }
+    }
+    p {
+      color: $color-black;
+      margin-top: 5px;
+      margin-bottom: 45px;
+      font-family: "Salsa";
+      padding: 0 10px 0 10px;
+
+      @media (max-width: 650px) {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 450px) {
+        font-size: 13px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 375px) {
+        font-size: 12px;
+      }
+    }
+    .login__link {
+      text-decoration: underline;
+      font-family: " Salsa";
+      color: red;
+
+      @media (max-width: 650px) {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      @media (max-width: 450px) {
+        font-size: 13px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 450px) {
+        font-size: 12px;
+      }
+      @media (max-width: 358px) {
+        font-size: 11px;
+      }
+    }
+    .login__link:hover {
+      color: $color-black;
+    }
+    .login__buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 10px 20px 10px 20px;
+      margin-top: 0px;
+
+      .login__btn {
+        @extend %flex-center;
+        width: 285px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 20px;
+        background-color: $color-red;
+        color: $color-white;
+        border: 0px;
+        cursor: pointer;
+
+        @media (max-width: 650px) {
+          width: 280px;
+          height: 33px;
+        }
+        @media (max-width: 450px) {
+          width: 260px;
+          height: 31px;
+        }
+        @media (max-width: 414px) {
+          font-size: 10px;
+        }
+        @media (max-width: 375px) {
+          width: 255px;
+          height: 31px;
+        }
+        @media (max-width: 360px) {
+          width: 250px;
+          height: 31px;
+        }
+
+        &:hover {
+          background: $color-black;
+          color: $color-white;
+          transition: 0.25s;
+        }
+      }
+    }
+
+    .login2__btn {
+      @extend %flex-center;
+      width: 285px;
+      height: 35px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 20px;
+      background-color: $color-red;
+      color: $color-white;
+      border: 0px;
+      cursor: pointer;
+      margin-top: 5px;
+
+      @media (max-width: 650px) {
+        width: 280px;
+        height: 33px;
+      }
+      @media (max-width: 450px) {
+        width: 260px;
+        height: 33px;
+      }
+      @media (max-width: 414px) {
+        font-size: 10px;
+      }
+      @media (max-width: 375px) {
+        width: 255px;
+        height: 31px;
+      }
+      @media (max-width: 360px) {
+        width: 250px;
+        height: 31px;
+      }
+
+      &:hover {
+        background-color: $color-black;
+        color: $color-white;
+        transition: 0.25s;
+      }
+    }
+
+    .login__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 650px) {
+        font-size: 15px;
+      }
+      @media (max-width: 450px) {
+        font-size: 14px;
+      }
+      @media (max-width: 450px) {
+        font-size: 13px;
+      }
+    }
+  }
+  .login__status {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 0px;
+    font-family: " Salsa";
+
+    @media (max-width: 450px) {
+      font-size: 16px;
+    }
+  }
+}
