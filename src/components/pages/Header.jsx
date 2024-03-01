@@ -19,11 +19,11 @@ const Header = () => {
   return (
     <header>
       <section className={styles.header}>
-        <span>Todo List</span>
+        <span className={styles.header__title}>Todo List</span>
         {isLogin ? (
-          <section className={styles.logout}>
-            <span>{name}</span>
-            <button onClick={onLogout} className={styles.logout__btn}>
+          <section className={styles.header__logout}>
+            <span className={styles.header__logout_name}>{name}</span>
+            <button onClick={onLogout} className={styles.header__logout_btn}>
               Log out
             </button>
           </section>

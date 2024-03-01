@@ -15,8 +15,8 @@
   .login__container2 {
     @extend %flex-center;
     flex-direction: column;
-    width: 350px;
-    height: 400px;
+    width: 400px;
+    height: 450px;
     background-color: #fdfdfd;
     border-radius: 15px;
     border: 1px solid $color-gold;
@@ -40,8 +40,8 @@
 
     .login__log {
       text-align: start;
-      height: 20px;
-      width: 260px;
+      height: 40px;
+      width: 280px;
       font-size: 14px;
       font-weight: 600;
       border-radius: 20px;
@@ -77,8 +77,8 @@
     }
     .login__sign {
       text-align: start;
-      height: 20px;
-      width: 260px;
+      height: 40px;
+      width: 280px;
       font-size: 14px;
       font-weight: 600;
       border-radius: 20px;
@@ -115,8 +115,8 @@
     }
     .login__name {
       text-align: start;
-      height: 20px;
-      width: 260px;
+      height: 40px;
+      width: 280px;
       font-size: 14px;
       font-weight: 600;
       border-radius: 20px;
