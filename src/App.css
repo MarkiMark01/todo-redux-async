@@ -8,7 +8,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  list-style: none;
   text-decoration: none;
 }
 ul {
@@ -24,6 +23,7 @@ li {
 
 input:checked + span {
   text-decoration: line-through;
+  color: rgba(32, 255, 32, 0.822);
 }
 
 /* span:last-child {
