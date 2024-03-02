@@ -1,15 +1,29 @@
 {
   "files": {
-    "main.css": "/todo-redux-async/static/css/main.bc3cfef1.css",
-    "main.js": "/todo-redux-async/static/js/main.fd133a9b.js",
-    "static/js/787.56cc986d.chunk.js": "/todo-redux-async/static/js/787.56cc986d.chunk.js",
+    "main.css": "/todo-redux-async/static/css/main.60060280.css",
+    "main.js": "/todo-redux-async/static/js/main.b579c0fd.js",
+    "static/js/606.dc6d9399.chunk.js": "/todo-redux-async/static/js/606.dc6d9399.chunk.js",
+    "static/css/440.ffca602d.chunk.css": "/todo-redux-async/static/css/440.ffca602d.chunk.css",
+    "static/js/440.946aeeba.chunk.js": "/todo-redux-async/static/js/440.946aeeba.chunk.js",
+    "static/css/649.cb4d5e68.chunk.css": "/todo-redux-async/static/css/649.cb4d5e68.chunk.css",
+    "static/js/649.7434d305.chunk.js": "/todo-redux-async/static/js/649.7434d305.chunk.js",
+    "static/css/385.cb4d5e68.chunk.css": "/todo-redux-async/static/css/385.cb4d5e68.chunk.css",
+    "static/js/385.55435fab.chunk.js": "/todo-redux-async/static/js/385.55435fab.chunk.js",
+    "static/js/725.8448a89a.chunk.js": "/todo-redux-async/static/js/725.8448a89a.chunk.js",
     "index.html": "/todo-redux-async/index.html",
-    "main.bc3cfef1.css.map": "/todo-redux-async/static/css/main.bc3cfef1.css.map",
-    "main.fd133a9b.js.map": "/todo-redux-async/static/js/main.fd133a9b.js.map",
-    "787.56cc986d.chunk.js.map": "/todo-redux-async/static/js/787.56cc986d.chunk.js.map"
+    "main.60060280.css.map": "/todo-redux-async/static/css/main.60060280.css.map",
+    "main.b579c0fd.js.map": "/todo-redux-async/static/js/main.b579c0fd.js.map",
+    "606.dc6d9399.chunk.js.map": "/todo-redux-async/static/js/606.dc6d9399.chunk.js.map",
+    "440.ffca602d.chunk.css.map": "/todo-redux-async/static/css/440.ffca602d.chunk.css.map",
+    "440.946aeeba.chunk.js.map": "/todo-redux-async/static/js/440.946aeeba.chunk.js.map",
+    "649.cb4d5e68.chunk.css.map": "/todo-redux-async/static/css/649.cb4d5e68.chunk.css.map",
+    "649.7434d305.chunk.js.map": "/todo-redux-async/static/js/649.7434d305.chunk.js.map",
+    "385.cb4d5e68.chunk.css.map": "/todo-redux-async/static/css/385.cb4d5e68.chunk.css.map",
+    "385.55435fab.chunk.js.map": "/todo-redux-async/static/js/385.55435fab.chunk.js.map",
+    "725.8448a89a.chunk.js.map": "/todo-redux-async/static/js/725.8448a89a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc3cfef1.css",
-    "static/js/main.fd133a9b.js"
+    "static/css/main.60060280.css",
+    "static/js/main.b579c0fd.js"
   ]
 }

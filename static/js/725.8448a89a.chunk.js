@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktodo_redux_async=self.webpackChunktodo_redux_async||[]).push([[725],{725:(s,o,e)=>{e.r(o),e.d(o,{default:()=>r});var d=e(87),n=e(184);const r=()=>(0,n.jsxs)("div",{children:[(0,n.jsx)("p",{children:"\u201cOops, something went wrong... Error 404\u201d \ud83d\udd75\ufe0f"}),(0,n.jsx)("section",{children:(0,n.jsx)(d.OL,{to:"/todos",children:"Go to Todo List"})})]})}}]);
+//# sourceMappingURL=725.8448a89a.chunk.js.map
