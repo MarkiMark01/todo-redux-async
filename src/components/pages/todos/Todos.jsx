@@ -33,7 +33,7 @@ const Todos = () => {
 
   return (
     <main className={styles.todos}>
-      <section className={styles.todos__inputs}>
+      <section>
         <NewTodoForm
           value={text}
           handleText={handleText}

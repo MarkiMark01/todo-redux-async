@@ -1,10 +1,13 @@
+import styles from "./todos.module.scss";
+
 const FilterText = ({ filterText, handleFilterText }) => {
   return (
-    <section>
+    <section className={styles.filterBox}>
       <input
-        placeholder="Filter tasks"
+        placeholder="Filter your tasks"
         value={filterText}
         onChange={handleFilterText}
+        className={styles.filterBox__filter}
       />
     </section>
   );

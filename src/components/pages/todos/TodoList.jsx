@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import TodoItem from "./TodoItem";
+import styles from "./todos.module.scss";
 
 const TodoList = ({ filter }) => {
   const todos = useSelector((state) => state.todos.todos);
@@ -12,7 +13,7 @@ const TodoList = ({ filter }) => {
   };
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {filteredTodos().map((todo) => (
         <TodoItem key={todo.id} {...todo} />
       ))}

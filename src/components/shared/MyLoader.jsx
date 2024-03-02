@@ -12,7 +12,7 @@ export const MyLoader = () => {
         wrapperStyle={{}}
         wrapperClass=""
         // colors={["#306cce", "#72a1ed"]}
-        colors={["#c70101", "#c70101"]}
+        colors={["#e70000", "#e70000"]}
       />
     </div>
   );
