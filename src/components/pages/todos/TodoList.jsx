@@ -14,6 +14,7 @@ const TodoList = ({ filter }) => {
 
   return (
     <ul className={styles.list}>
+      <span className={styles.list__text}>Task list</span>
       {filteredTodos().map((todo) => (
         <TodoItem key={todo.id} {...todo} />
       ))}

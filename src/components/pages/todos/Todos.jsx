@@ -33,20 +33,22 @@ const Todos = () => {
 
   return (
     <main className={styles.todos}>
-      <section>
-        <NewTodoForm
-          value={text}
-          handleText={handleText}
-          handleAction={handleAction}
-        />
-        <FilterText
-          filterText={filterText}
-          handleFilterText={handleFilterText}
-        />
+      <section className={styles.todos__container}>
+        <section>
+          <NewTodoForm
+            value={text}
+            handleText={handleText}
+            handleAction={handleAction}
+          />
+          <FilterText
+            filterText={filterText}
+            handleFilterText={handleFilterText}
+          />
+        </section>
+        <TodoList filter={filterText} />
+        {/* {status === "loading" && <h2>Loading...</h2>} */}
+        {error && <h2>An error occured: {error}</h2>}
       </section>
-      <TodoList filter={filterText} />
-      {/* {status === "loading" && <h2>Loading...</h2>} */}
-      {error && <h2>An error occured: {error}</h2>}
     </main>
   );
 };
