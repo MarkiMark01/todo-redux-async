@@ -5,6 +5,7 @@ import { addNewTodo, fetchTodos } from "../../redux/todo/todoOperations";
 import NewTodoForm from "./NewTodoForm";
 import TodoList from "./TodoList";
 import FilterText from "./FilterText";
+import styles from "./todos.module.scss";
 
 const Todos = () => {
   const [text, setText] = useState("");
@@ -31,13 +32,18 @@ const Todos = () => {
   }, [dispatch]);
 
   return (
-    <main className="App">
-      <NewTodoForm
-        value={text}
-        handleText={handleText}
-        handleAction={handleAction}
-      />
-      <FilterText filterText={filterText} handleFilterText={handleFilterText} />
+    <main className={styles.todos}>
+      <section className={styles.todos__inputs}>
+        <NewTodoForm
+          value={text}
+          handleText={handleText}
+          handleAction={handleAction}
+        />
+        <FilterText
+          filterText={filterText}
+          handleFilterText={handleFilterText}
+        />
+      </section>
       <TodoList filter={filterText} />
       {/* {status === "loading" && <h2>Loading...</h2>} */}
       {error && <h2>An error occured: {error}</h2>}
