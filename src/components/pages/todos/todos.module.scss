@@ -43,6 +43,10 @@
         @media (max-width: 550px) {
           font-size: 15px;
           height: 30px;
+          padding-left: 10px;
+        }
+        @media (max-width: 450px) {
+          font-size: 13px;
         }
 
         &::placeholder {
@@ -51,6 +55,9 @@
 
           @media (max-width: 550px) {
             font-size: 14px;
+          }
+          @media (max-width: 450px) {
+            font-size: 13px;
           }
         }
         &:focus {
@@ -98,6 +105,17 @@
         @media (max-width: 550px) {
           width: 130px;
           height: 30px;
+        }
+        @media (max-width: 500px) {
+          font-size: 10px;
+        }
+        @media (max-width: 450px) {
+          width: 150px;
+          font-size: 9px;
+        }
+        @media (max-width: 400px) {
+          font-size: 9px;
+          width: 200px;
         }
       }
     }
@@ -165,6 +183,9 @@
         @media (max-width: 550px) {
           font-size: 20px;
         }
+        @media (max-width: 450px) {
+          font-size: 19px;
+        }
       }
 
       .list__item {
@@ -198,14 +219,25 @@
           @media (max-width: 550px) {
             font-size: 17px;
           }
+          @media (max-width: 450px) {
+            font-size: 14px;
+            text-align: justify;
+          }
         }
         .list__item_croos {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           height: 40px;
           width: 40px;
           font-size: 34px;
           font-weight: 600;
           color: #e70000;
           cursor: pointer;
+
+          @media (max-width: 450px) {
+            font-size: 32px;
+          }
         }
       }
     }
