@@ -17,18 +17,16 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <section className={styles.header}>
-        <span className={styles.header__title}>Todo List</span>
-        {isLogin ? (
-          <section className={styles.header__logout}>
-            <span className={styles.header__logout_name}>{name}</span>
-            <button onClick={onLogout} className={styles.header__logout_btn}>
-              Log out
-            </button>
-          </section>
-        ) : null}
-      </section>
+    <header className={styles.header}>
+      <span className={styles.header__title}>Todo List</span>
+      {isLogin ? (
+        <section className={styles.header__logout}>
+          <span className={styles.header__logout_name}>{name}</span>
+          <button onClick={onLogout} className={styles.header__logout_btn}>
+            Log out
+          </button>
+        </section>
+      ) : null}
     </header>
   );
 };
