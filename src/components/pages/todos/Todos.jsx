@@ -25,7 +25,7 @@ const Todos = () => {
       dispatch(addNewTodo(text));
       setText("");
     } else {
-      alert("Please, enter your tasks!");
+      alert("Please, enter your tasks!)");
     }
   };
 
