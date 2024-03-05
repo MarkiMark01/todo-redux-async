@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/todo-redux-async/static/css/main.02358655.css",
-    "main.js": "/todo-redux-async/static/js/main.eaf5a3d2.js",
+    "main.js": "/todo-redux-async/static/js/main.9b1835b7.js",
     "static/js/606.dc6d9399.chunk.js": "/todo-redux-async/static/js/606.dc6d9399.chunk.js",
     "static/css/440.db6ee212.chunk.css": "/todo-redux-async/static/css/440.db6ee212.chunk.css",
-    "static/js/440.946aeeba.chunk.js": "/todo-redux-async/static/js/440.946aeeba.chunk.js",
+    "static/js/440.e8388f68.chunk.js": "/todo-redux-async/static/js/440.e8388f68.chunk.js",
     "static/css/649.cb4d5e68.chunk.css": "/todo-redux-async/static/css/649.cb4d5e68.chunk.css",
     "static/js/649.7434d305.chunk.js": "/todo-redux-async/static/js/649.7434d305.chunk.js",
     "static/css/385.cb4d5e68.chunk.css": "/todo-redux-async/static/css/385.cb4d5e68.chunk.css",
@@ -12,10 +12,10 @@
     "static/js/725.8448a89a.chunk.js": "/todo-redux-async/static/js/725.8448a89a.chunk.js",
     "index.html": "/todo-redux-async/index.html",
     "main.02358655.css.map": "/todo-redux-async/static/css/main.02358655.css.map",
-    "main.eaf5a3d2.js.map": "/todo-redux-async/static/js/main.eaf5a3d2.js.map",
+    "main.9b1835b7.js.map": "/todo-redux-async/static/js/main.9b1835b7.js.map",
     "606.dc6d9399.chunk.js.map": "/todo-redux-async/static/js/606.dc6d9399.chunk.js.map",
     "440.db6ee212.chunk.css.map": "/todo-redux-async/static/css/440.db6ee212.chunk.css.map",
-    "440.946aeeba.chunk.js.map": "/todo-redux-async/static/js/440.946aeeba.chunk.js.map",
+    "440.e8388f68.chunk.js.map": "/todo-redux-async/static/js/440.e8388f68.chunk.js.map",
     "649.cb4d5e68.chunk.css.map": "/todo-redux-async/static/css/649.cb4d5e68.chunk.css.map",
     "649.7434d305.chunk.js.map": "/todo-redux-async/static/js/649.7434d305.chunk.js.map",
     "385.cb4d5e68.chunk.css.map": "/todo-redux-async/static/css/385.cb4d5e68.chunk.css.map",
@@ -24,6 +24,6 @@
   },
   "entrypoints": [
     "static/css/main.02358655.css",
-    "static/js/main.eaf5a3d2.js"
+    "static/js/main.9b1835b7.js"
   ]
 }
