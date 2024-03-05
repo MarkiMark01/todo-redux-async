@@ -24,6 +24,8 @@ const Todos = () => {
     if (text.trim().length) {
       dispatch(addNewTodo(text));
       setText("");
+    } else {
+      alert("Please, enter your tasks!");
     }
   };
 
